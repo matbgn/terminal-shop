@@ -3,7 +3,7 @@
 ---
 
 1. Init npm repo and install docsify-cli or do it globally
-   ```
+   ```bash
       npm init
       npm i -D docsify-cli
    
@@ -12,7 +12,7 @@
       npm i docsify-cli -g
    ```
 1. Init docs folder
-   ```json
+   ```bash
    docsify init ./docs
    ```
 1. Add search support in `./docs/index.html` by adding following line before body's end
