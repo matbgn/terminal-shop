@@ -4,10 +4,14 @@
 
 ```mermaid
 classDiagram
-    Item <|-- Device
-    Item <|-- Sim
-    Item <|-- Case
-    Item <|-- Charger
+    Item <|.. Device
+    Item <|.. Sim
+    Item <|.. Case
+    Item <|.. Charger
+    
+    Order o-- Transaction
+    
+    Transaction o-- Item
     
     class Item {
       <<Interface>>
