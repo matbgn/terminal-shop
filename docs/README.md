@@ -1,8 +1,6 @@
 # Headline
 
-> :warning: An awesome project.
-
-> ⚠ Second test
+> :fire: An awesome project.
 
 ```mermaid
 classDiagram
