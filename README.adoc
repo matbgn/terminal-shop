@@ -1,0 +1,33 @@
+= Terminal Shop MIA
+
+== Class Diagram
+http://www.plantuml.com/plantuml/uml/JP4zIyH048Rx_8ef5H6imoadPtED5bud8kFi61UItJ0p4OBwtzqFZsotxyFmVh1xDHHRfh6Z4LNXIHmBV7S0LuHYFToBuBex2GP5CX_37Tp2OmoSJomQZZtuO0dUPEAyKbo2RV2t-xTkF6g0hJFtyC1VdegR-gc7Ppyr0OIQJWweLNsY32nwRdMeEZTwUIqEo_kfL6hJqvFb0udXU3IUIZP5nodBn8SXIpGUegmDSgmaVivj6pgB9oxkIGniRmLSNEQSwhxxkJvFsa0QrQWofv5rHRVduD97_040
+
+@startuml
+class Order {
+  +cart: Array<Transaction> = None
+  +total: int = 0
+  +discount: int = 0
+}
+
+class Transaction {
+  +type: Device
+  +sim: Sim = None
+  +case: Case
+  +chargers: Array<Charger> = []
+  +subTotal: int = 0
+}
+
+interface Item {
+  code: String
+  category: String
+  description: String
+  price: int
+  get_price()
+}
+
+Item <|- Device
+Item <|- Sim
+Item <|- Case
+Item <|- Charger
+@enduml

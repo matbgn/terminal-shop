@@ -1,0 +1,36 @@
+# Headline
+
+> :warning: An awesome project.
+
+> ⚠ Second test
+
+```mermaid
+classDiagram
+    Item <|-- Device
+    Item <|-- Sim
+    Item <|-- Case
+    Item <|-- Charger
+    
+    class Item {
+      <<Interface>>
+      code: String
+      category: String
+      description: String
+      price: int
+      get_price()
+    }
+    
+    class Order {
+      +cart: Array<Transaction> = None
+      +total: int = 0
+      +discount: int = 0
+    }
+    
+    class Transaction {
+      +type: Device
+      +sim: Sim = None
+      +case: Case
+      +chargers: Array<Charger> = []
+      +subTotal: int = 0
+    }
+```
