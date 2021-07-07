@@ -8,17 +8,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.css">
+    <script src="//cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
 </head>
 <body>
 <div id="app"></div>
-<script src="//cdn.jsdelivr.net/npm/docsify-edit-on-github"></script>
-<script src="//cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
 <script>
     window.$docsify = {
         search: 'auto',
         name: '',
         repo: 'matbgn/terminal-shop',
         loadSidebar: true,
+        subMaxLevel: 2,
         markdown: {
             renderer: {
                 code: function (code, lang) {
@@ -31,9 +31,6 @@
                 }
             }
         },
-        plugins: [
-            EditOnGithubPlugin.create('https://github.com/matbgn/terminal-shop/tree/master/docs/')
-        ]
     }
 
     let num = 0;

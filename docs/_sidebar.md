@@ -1,3 +1,3 @@
 - Introduction :orange_book:
-  - [About project](README.md)
-  - [Documenting with Docsify](start-documenting.md)
+    - [About project](README.md)
+    - [Documenting with Docsify](start-documenting.md)
