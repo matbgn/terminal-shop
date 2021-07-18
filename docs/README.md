@@ -14,7 +14,6 @@ classDiagram
     Transaction o-- Item
     
     class Item {
-      <<Interface>>
       code: String
       category: String
       description: String
