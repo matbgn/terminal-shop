@@ -46,7 +46,7 @@ class View:
         response = input("Enter your number and press enter: ")
         response = self.__format_input_as_int(response)
 
-        while type(response) != int or (response < 0 or response > max_number):
+        while type(response) != int or (response < 1 or response > max_number):
             response = input("Enter a valid number and press enter: ")
             response = self.__format_input_as_int(response)
 
