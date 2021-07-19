@@ -80,8 +80,8 @@ class View:
 
     @staticmethod
     def ask_do_you_want_to_make_a_new_transaction() -> bool:
-        response = input("If you buy another device you'll get a nice discount ;-)"
-                         "Do you want to make a new transaction? [Y]es or [N]o: \n")
+        response = input("If you buy another device you'll get a nice discount ;-)\n"
+                         "Do you want to make a new transaction? [Y]es or [N]o: ")
 
         while response != "N" and response != "n" and response != "Y" and response != "y":
             response = input("Enter a valid response, either Y/y for Yes or N/n for No and press enter: ")
