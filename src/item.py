@@ -1,25 +1,18 @@
-from abc import ABCMeta, abstractmethod
-
-
 class Item:
-    def __init__(self, code: str, category: str, description: str, price: int):
-        self.code = code
-        self.category = category
-        self.description = description
-        self.price = price
+    def __init__(self, code: str, category: str, description: str, price: int = 0) -> None:
+        self.__code = code
+        self.__category = category
+        self.__description = description
+        self.__price = price
 
+    @property
+    def description(self) -> str:
+        return self.__description
+    
+    @property
+    def category(self) -> str:
+        return self.__category.capitalize().replace('_', ' ')
 
-class Device(Item):
-    pass
-
-
-class Sim(Item):
-    pass
-
-
-class Case(Item):
-    pass
-
-
-class Charger(Item):
-    pass
+    @property
+    def price(self) -> float:
+        return self.__price

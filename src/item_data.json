@@ -1,0 +1,98 @@
+[
+  {
+    "category": "phone",
+    "item_code": "BPCM",
+    "description": "Compact",
+    "price": 29.99
+  },
+  {
+    "category": "phone",
+    "item_code": "BPSH",
+    "description": "Clam shell",
+    "price": 49.99
+  },
+  {
+    "category": "phone",
+    "item_code": "RPSS",
+    "description": "Robo phone - 5inch 64GB memory",
+    "price": 199.99
+  },
+  {
+    "category": "phone",
+    "item_code": "RPLL",
+    "description": "Robo phone - 6inch 256GB memory",
+    "price": 499.99
+  },
+  {
+    "category": "phone",
+    "item_code": "YPLS",
+    "description": "Y-phone standard 6 inch 64GB memory",
+    "price": 549.99
+  },
+  {
+    "category": "phone",
+    "item_code": "YPLL",
+    "description": "Y-phone deluxe 6 inch 256GB memory",
+    "price": 649.99
+  },
+  {
+    "category": "tablet",
+    "item_code": "RTMS",
+    "description": "RoboTab - 8 inch screen 64GB memory",
+    "price": 149.99
+  },
+  {
+    "category": "tablet",
+    "item_code": "RTML",
+    "description": "RoboTab - 10 inch screen 128GB memory",
+    "price": 299.99
+  },
+  {
+    "category": "tablet",
+    "item_code": "YTLM",
+    "description": "Y-tab standard - 10 inch screen 128GB memory",
+    "price": 499.99
+  },
+  {
+    "category": "tablet",
+    "item_code": "YTLL",
+    "description": "Y-tab deluxe - 10 inch screen 256GB memory",
+    "price": 599.99
+  },
+  {
+    "category": "sim_card",
+    "item_code": "SMNO",
+    "description": "Sim free (no SIM card)",
+    "price": 0.0
+  },
+  {
+    "category": "sim_card",
+    "item_code": "SMPG",
+    "description": "Pay as you go (with SIM card)",
+    "price": 9.99
+  },
+  {
+    "category": "case",
+    "item_code": "CSST",
+    "description": "Standard",
+    "price": 0.0
+  },
+  {
+    "category": "case",
+    "item_code": "CSLX",
+    "description": "Luxury",
+    "price": 50.0
+  },
+  {
+    "category": "charger",
+    "item_code": "CGCR",
+    "description": "Car",
+    "price": 19.99
+  },
+  {
+    "category": "charger",
+    "item_code": "CGHM",
+    "description": "Home",
+    "price": 15.99
+  }
+]
