@@ -54,7 +54,7 @@ class View:
         return response
 
     @staticmethod
-    def format_input_as_int(response):
+    def format_input_as_int(response: any):
         try:
             return int(response)
         except ValueError:

@@ -15,8 +15,8 @@ class Order:
         return self.__cart
 
     @cart.setter
-    def cart(self, value: Transaction):
-        self.__cart.append(value)
+    def cart(self, transaction: Transaction):
+        self.__cart.append(transaction)
 
     @property
     def discount(self):

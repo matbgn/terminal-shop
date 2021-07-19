@@ -6,6 +6,8 @@
 
 ```mermaid
 classDiagram
+    
+    
  
     Order o-- Transaction
     
@@ -14,42 +16,97 @@ classDiagram
     Item -- ItemRepository
     
     Order -- Controller
+    
+    App -- Router
+    
+    Router -- Controller
     Transaction -- Controller
     Controller -- Item
     
     Controller -- View
+    class Router {
+        -controller: Controller
+        +run()
+    }
     
     class Controller {
-        make_new_transaction()
+        -item_repository: ItemRepository
+        -view: View
+        -order: Order
+        -transaction: Transaction = None
+        +make_new_transaction()
         select_device()
         select_sim()
         select_case()
         select_charger()
-        display_transaction_total()
+        select_an_item(devices: List[Item], transaction_attribute: str)
+        display_transaction_total(discount: float = 0.0)
         display_transaction_items()
         allow_discount()
+        +display_order_total()
     }
     
     class Item {
-      code: String
-      category: String
-      description: String
-      price: int
-      get_price()
+        -code: String
+        -category: String
+        -description: String
+        -price: int = 0
+        +get_description()
+        +get_category()
+        +get_price()
     }
     
     class Order {
-      +cart: Array<Transaction> = []
-      +total: int = 0
-      +discount: int = 0
+        -cart: Array<Transaction> = []
+        -total: int = 0
+        -discount: int = 0
+        +get_cart()
+        +set_cart(transaction: Transaction)
+        +get_discount()
+        +set_discount(value: float)
     }
     
     class Transaction {
-      +device_type: Item
-      +sim: Item = None
-      +case: Item
-      +chargers: Array<Item> = []
-      +sub_total: int = 0
+        -device_type: Item = None
+        -sim: Item = None
+        -case: Item = None
+        -chargers: Array<Item> = []
+        -sub_total: int = 0
+        +get_device_type()
+        +set_device_type(value: Item)
+        +get_sim()
+        +set_sim(value: Item)
+        +get_case()
+        +set_case(value: Item)
+        +get_chargers()
+        +set_chargers(value: Item)
+        +get_sub_total()
+        +set_sub_total(value: float)
+    }
+    
+    class ItemRepository {
+        path: str = "src/item_data.json"
+        items: Array<Item> = []
+        load(path: str)
+        add(item: Item)
+        all()
+        find(index: int)
+        find_by_category(category: str)
+    }
+    
+    class View {
+        print_void_line()$
+        display_single_item(cli: bool = False)$
+        display_items(items: List[Item])$
+        display_which_one_do_you_want(arg: str = "")$
+        display_you_selected()$
+        ask_for_device_type()
+        ask_for_a_valid_number(max_number: int)
+        format_input_as_int(response: any)$
+        display_transaction_sub_total(transaction: Transaction, discount: float)$
+        display_transaction_items(transaction: Transaction)
+        ask_do_you_want_to_make_a_new_transaction()$
+        display_order_big_total(order: Order)$
     }
 ```
 

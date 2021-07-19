@@ -22,14 +22,6 @@ class Transaction:
         self.__sub_total = self.__sub_total + value.price
 
     @property
-    def sub_total(self):
-        return self.__sub_total
-
-    @sub_total.setter
-    def sub_total(self, value: float):
-        self.__sub_total = value
-
-    @property
     def sim(self):
         return self.__sim
 
@@ -55,3 +47,11 @@ class Transaction:
     def chargers(self, value: Item):
         self.__chargers = value
         self.__sub_total = self.__sub_total + value.price
+
+    @property
+    def sub_total(self):
+        return self.__sub_total
+
+    @sub_total.setter
+    def sub_total(self, value: float):
+        self.__sub_total = value
