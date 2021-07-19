@@ -97,28 +97,28 @@ classDiagram
     }
     
     class ItemRepository {
-        path: str = "src/item_data.json"
-        items: Array<Item> = []
+        -path: str = "src/item_data.json"
+        -items: Array<Item> = []
         load(path: str)
         add(item: Item)
         all()
-        find(index: int)
-        find_by_category(category: str)
+        +find(index: int)
+        +find_by_category(category: str)
     }
     
     class View {
-        print_void_line()$
-        display_single_item(cli: bool = False)$
-        display_items(items: List[Item])$
-        display_which_one_do_you_want(arg: str = "")$
-        display_you_selected()$
-        ask_for_device_type()
-        ask_for_a_valid_number(max_number: int)
+        +print_void_line()$
+        +display_single_item(cli: bool = False)$
+        +display_items(items: List[Item])$
+        +display_which_one_do_you_want(arg: str = "")$
+        +display_you_selected()$
+        +ask_for_device_type()
+        +ask_for_a_valid_number(max_number: int)
         format_input_as_int(response: any)$
-        display_transaction_sub_total(transaction: Transaction, discount: float)$
-        display_transaction_items(transaction: Transaction)
-        ask_do_you_want_to_make_a_new_transaction()$
-        display_order_big_total(order: Order)$
+        +display_transaction_sub_total(transaction: Transaction, discount: float)$
+        +display_transaction_items(transaction: Transaction)
+        +ask_do_you_want_to_make_a_new_transaction()$
+        +display_order_big_total(order: Order)$
     }
 ```
 

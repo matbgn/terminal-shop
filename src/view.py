@@ -44,17 +44,17 @@ class View:
 
     def ask_for_a_valid_number(self, max_number: int) -> int:
         response = input("Enter your number and press enter: ")
-        response = self.format_input_as_int(response)
+        response = self.__format_input_as_int(response)
 
         while type(response) != int or (response < 0 or response > max_number):
             response = input("Enter a valid number and press enter: ")
-            response = self.format_input_as_int(response)
+            response = self.__format_input_as_int(response)
 
         print()
         return response
 
     @staticmethod
-    def format_input_as_int(response: any):
+    def __format_input_as_int(response: any):
         try:
             return int(response)
         except ValueError:
