@@ -1,6 +1,18 @@
-# Headline
+# Terminal shop app
 
-> :fire: An awesome project.
+> :information_source: Get sources with:
+> ```bash
+> git clone git@github.com:matbgn/terminal-shop.git
+>```
+ 
+> :fire: This app require python 3.6+
+
+## Usage
+Run app with:
+```bash
+cd terminal-shop
+python app.py
+```
 
 ## Class Diagram
 
@@ -111,6 +123,7 @@ classDiagram
 ```
 
 ## Item Repository
+> :bulb: Store in `item_data.json` and load with ItemRepository constructor
 
 | Id | Category | Item code | Description                                  | Price ($) |
 |----|----------|-----------|----------------------------------------------|-----------|

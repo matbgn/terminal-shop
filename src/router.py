@@ -6,7 +6,7 @@ class Router:
         self.__controller = controller
 
     def run(self):
-        print("Welcome to our terminal app shop!\n"
+        print("Welcome to our terminal shop app!\n"
               "You will be guided throughout your purchases\n"
               "Compose your cart with nice transactions bundles\n"
               "Enjoy your journey!\n")
