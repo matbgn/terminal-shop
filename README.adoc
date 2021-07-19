@@ -1,5 +1,13 @@
 = Terminal Shop MIA
+:icons: font
+ifdef::env-github[]
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+endif::[]
 
 == Documentation, usage and Class Diagram
 
-https://matbgn.github.io/terminal-shop/
+CAUTION: See documentation here: https://matbgn.github.io/terminal-shop/
